@@ -47,9 +47,10 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Select Specific Local Port, enter "8332", and click "Next"
 - Select "Allow the Connection", and click "Next"
 - Leave the "Domain", "Private", and "Public" checkboxes checked, and click "Next"
-- For Name, enter "Bitcoin RPC"
-- For Description, enter "Allow WSL to communicate with you Bitcoin node", and click "Finish"
-- Right-click the new "Bitcoin RPC", and select "Properties"
+- For Name, enter "WSL Bitcoin RPC"
+- For Description, enter "Allow Lightning, running in WSL, to communicate with you Bitcoin node"
+- Click "Finish"
+- Right-click the new "WSL Bitcoin RPC", and select "Properties"
 - Click Scope
 - For Local IP Addresses, select "These IP Addresses" and click "Add"
 - Enter "172.0.0.0/8" and click "OK"
