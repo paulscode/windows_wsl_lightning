@@ -84,7 +84,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Wait for a few seconds, then enter the following command:
 > cat .lightning/log
 - If any errors appear (such as modules missing), STOP HERE AND DO NOT PROCEED!
-- If there are no errors in the log, Enter the following commands:
+- If there are no errors in the log, enter the following commands:
 > wget https://raw.githubusercontent.com/paulscode/windows_wsl_lightning/refs/heads/main/application-setup.sh
 > chmod 700 application-setup.sh
 > ./application-setup.sh
