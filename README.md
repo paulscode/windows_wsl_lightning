@@ -51,7 +51,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
   - If you never run your Bitcoin node while on a corporate network, then uncheck "Domain"
 - Click "Next"
 - For Name, enter "WSL Bitcoin RPC"
-- For Description, enter "Allow Lightning, running in WSL, to communicate with you Bitcoin node"
+- For Description, enter "Enable services running in WSL (such as Lightning) to communicate with your Bitcoin node using RPC"
 - Click "Finish"
 - Right-click the new "WSL Bitcoin RPC", and select "Properties"
 - Click "Scope"
