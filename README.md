@@ -20,16 +20,22 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - In the task bar, search for "Windows PowerShell"
 - Right-click and select "Run as Administrator"
 - Type in:
-> wsl --install
-- Reboot
+  ```bash
+  wsl --install
+  ```
+- Close Windows PowerShell and Reboot
 ## STEP 3: Look up IP Addresses for WSL (Ubuntu) and Windows
 - In the task bar, search for and launch the "Ubuntu" app
 - Enter a username and password when prompted (may be different than your Windows username and password)
 - Wait for the command prompt to finish loading
 - Execute the following command, and wite down the results as "WSL IP Address":
-> hostname -I | awk '{print $1}'
+  ```bash
+  hostname -I | awk '{print $1}'
+  ```
 - Execute the following command, and write this one down as "Windows IP Address":
-> grep nameserver /etc/resolv.conf | awk '{print $2}'
+  ```bash
+  grep nameserver /etc/resolv.conf | awk '{print $2}'
+  ```
 ## STEP 4: Configure firewall rule for WSL to communicate with Windows
 - In the task bar, search for and lauch "Windows Defender Firewall"
 - Click on "Advanced Settings"
@@ -53,25 +59,32 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Launch Bitcoin Knots (or Bitcoin Core)
 - Click on "Settings", select "Options", and enable "RPC Server" checkbox
 - Click "Open Configuration File", and click "Continue"
-- Enter the following (change someusername and psw0rd!):
-> server=1
-> rpcuser=someusername
-> rpcpassword=psw0rd!
-> rpcbind=0.0.0.0
-> rpcallowip=172.0.0.0/8
-> rpcport=8332
+- Enter the following (change "someusername" and "psw0rd!", and remember for STEP 6 what you chose):
+  ```ini
+  server=1
+  rpcuser=someusername
+  rpcpassword=psw0rd!
+  rpcbind=0.0.0.0
+  rpcallowip=172.0.0.0/8
+  rpcport=8332
+  ```
 - Select "File", then "Save", and close the editor
 - Click "OK"
 ## STEP 6: Setup lightningd (in WSL)
 - Return to the WSL command prompt (should still be open from STEP 3)
 - Enter the following commands:
-> cd ~
-> wget https://raw.githubusercontent.com/paulscode/windows_wsl_lightning/refs/heads/main/lightning-setup.sh
-> chmod 700 lightning-setup.sh
-> ./lightning-setup.sh
+  ```bash
+  cd ~
+  wget https://raw.githubusercontent.com/paulscode/windows_wsl_lightning/refs/heads/main/lightning-setup.sh
+  chmod 700 lightning-setup.sh
+  ./lightning-setup.sh
+  ```
+- You will be propted to enter a few values to configure your lightning node (the "RPC username" and "RPC password" are from STEP 5)
 - Wait for script to finish executing, then enter:
-> rm -f lightning-setup.sh
-> sudo reboot
+  ```bash
+  rm -f lightning-setup.sh
+  sudo reboot
+  ```
 - Close Bitcoin Knots (or Bitcoin Core) and wait for it to completely shut down
 - Reboot the computer
 ## STEP 7: Setup CLN Application
@@ -79,18 +92,26 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - In the task bar, search for and launch the "Ubuntu" app
 - Wait for the command prompt to finish loading
 - Enter the following command:
-> lightningd
+  ```bash
+  lightningd
+  ```
 - If errors appear, STOP HERE AND DO NOT PROCEED!
 - Wait for a few seconds, then enter the following command:
-> cat .lightning/log
+  ```bash
+  cat .lightning/log
+  ```
 - If any errors appear (such as modules missing), STOP HERE AND DO NOT PROCEED!
 - If there are no errors in the log, enter the following commands:
-> wget https://raw.githubusercontent.com/paulscode/windows_wsl_lightning/refs/heads/main/application-setup.sh
-> chmod 700 application-setup.sh
-> ./application-setup.sh
+  ```bash
+  wget https://raw.githubusercontent.com/paulscode/windows_wsl_lightning/refs/heads/main/application-setup.sh
+  chmod 700 application-setup.sh
+  ./application-setup.sh
+  ```
 - Wait for script to finish executing, then enter:
-> rm -f application-setup.sh
-> sudo reboot
+  ```bash
+  rm -f application-setup.sh
+  sudo reboot
+  ```
 - Close Bitcoin Knots (or Bitcoin Core) and wait for it to completely shut down
 - Reboot the computer
 ## STEP 8: Enjoy!
@@ -98,15 +119,21 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - In the task bar, search for and launch the "Ubuntu" app
 - Wait for the command prompt to finish loading
 - Enter the following command:
-> lightningd
+  ```bash
+  lightningd
+  ```
 - Wait for a few seconds, then enter the following command:
-> cln-application
+  ```bash
+  cln-application
+  ```
 - Copy the URL (should look something like http://172.30.225.200:8080, but the IP will likely be different)
 - Open a browser in Windows, and enter the URL
 
 # Shutting Down
 - Return to the WSL command prompt, and press Ctrl+c to stop the CLN Application
 - Enter the following command:
-> sudo reboot
+  ```bash
+  sudo reboot
+  ```
 - Close Bitcoin Knots (or Bitcoin Core) and wait for it to completely shut down
 - Reboot the computer before attempting to launch again
