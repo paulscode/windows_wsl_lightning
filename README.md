@@ -12,7 +12,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 ## STEP 1: Enable Virtualization
 - Reboot your computer
 - During startup, press whatever hotkey brings you into the Bios settings (this is specific to your computer model)
-- In the Bios, locate and enable the option called something like "Virtualization" (examples: "Intel Virtual Technology", "AMT Virtuialization")
+- In the Bios, locate and enable the option called something like "Virtualization" (examples: "Intel Virtual Technology", "AMT Virtualization")
 - Restart Windows
 - In the task bar, search for "Turn Windows features on or off"
 - Locate and Enable "Virtual Machine Platform"
