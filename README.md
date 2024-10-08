@@ -23,7 +23,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 > wsl --install
 - Reboot
 ## STEP 3: Look up IP Addresses for WSL (Ubuntu) and Windows
-- In the task bar, search for and launch the "Ubuntu" App
+- In the task bar, search for and launch the "Ubuntu" app
 - Enter a username and password when prompted (may be different than your Windows username and password)
 - Wait for the command prompt to finish loading
 - Execute the following command, and wite down the results as "WSL IP Address":
@@ -76,7 +76,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Reboot the computer
 ## STEP 7: Setup CLN Application
 - Launch Bitcoin Knots (or Bitcoin Core) and wait for it to connect to some peers
-- In the task bar, search for and launch "Ubuntu"
+- In the task bar, search for and launch the "Ubuntu" app
 - Wait for the command prompt to finish loading
 - Enter the following command:
 > lightningd
@@ -95,7 +95,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Reboot the computer
 ## STEP 8: Enjoy!
 - Launch Bitcoin Knots (or Bitcoin Core) and wait for it to connect to some peers
-- In the task bar, search for and launch "Ubuntu"
+- In the task bar, search for and launch the "Ubuntu" app
 - Wait for the command prompt to finish loading
 - Enter the following command:
 > lightningd
