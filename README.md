@@ -5,7 +5,7 @@ This project contains a couple of utilities to simplify setting up Core Lightnin
 # IMPORTANT NOTES (Read before proceeding)
 
 Bitcoin Knots (or Bitcoin Core) must be installed in Windows, configured as a full (unpruned) node, and have completed the IBD sync process.
-These scripts assume the default installation folder was used (C:\Program Files\Bitcoin).  If this is not where you have installed Bitcoin Knots (or Bitcoin Core), then DO NOT PROCEED!
+These scripts assume the default installation folder was used (C:\Program Files\Bitcoin).  If this is not where you have installed the application, then DO NOT PROCEED!
 
 # The Process
 
