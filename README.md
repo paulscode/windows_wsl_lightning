@@ -46,16 +46,18 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Select "TCP"
 - Select "Specific Local Port", enter "8332", and click "Next"
 - Select "Allow the Connection", and click "Next"
-- Leave the "Domain", "Private", and "Public" checkboxes checked, and click "Next"
+- Leave "Private" checked, and decide whether or not to leave the other two checked:
+  - If you never run your Bitcoin node while on a public internet connection, then uncheck "Public"
+  - If you never run your Bitcoin node while on a corporate network, then uncheck "Domain"
+- Click "Next"
 - For Name, enter "WSL Bitcoin RPC"
 - For Description, enter "Allow Lightning, running in WSL, to communicate with you Bitcoin node"
 - Click "Finish"
 - Right-click the new "WSL Bitcoin RPC", and select "Properties"
 - Click "Scope"
 - For Local IP Addresses, select "These IP Addresses" and click "Add"
-- Enter "172.0.0.0/8" and click "OK"
-- For Remote IP Addresses, select "These IP Addresses" and click "Add"
-- Enter "172.0.0.0/8" and click "OK"
+- Enter "172.16.0.0/12" and click "OK"
+- Do not enter anything into Remote IP Addresses
 - Click "Apply" then "OK", and close Windows Defender Firewall
 ## STEP 5: Configure Bitcoin node RPC settings
 - Launch Bitcoin Knots (or Bitcoin Core)
@@ -67,7 +69,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
   rpcuser=someusername
   rpcpassword=psw0rd!
   rpcbind=0.0.0.0
-  rpcallowip=172.0.0.0/8
+  rpcallowip=172.16.0.0/12
   rpcport=8332
   ```
 - Select "File", then "Save", and close the editor
