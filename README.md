@@ -57,7 +57,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - For Remote IP Addresses, select "These IP Addresses" and click "Add"
 - Enter "172.0.0.0/8" and click "OK"
 - Click "Apply" then "OK", and close Windows Defender Firewall
-## STEP 5: Configure Bitcoin node to accept RPC
+## STEP 5: Configure Bitcoin node RPC settings
 - Launch Bitcoin Knots (or Bitcoin Core)
 - Click on "Settings", select "Options", and enable the "RPC Server" checkbox
 - Click "Open Configuration File", and click "Continue"
