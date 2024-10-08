@@ -16,7 +16,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Restart Windows
 - In the task bar, search for "Turn Windows features on or off"
 - Locate and Enable "Virtual Machine Platform"
-## STEP 2: Install WSL
+## STEP 2: Install WSL (Ubuntu)
 - In the task bar, search for "Windows PowerShell"
 - Right-click and select "Run as Administrator"
 - Type in:
@@ -109,4 +109,4 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Enter the following command:
 > sudo reboot
 - Close Bitcoin Knots (or Bitcoin Core) and wait for it to completely shut down
-- Reboot the computer before attempting to lauch again
+- Reboot the computer before attempting to launch again
