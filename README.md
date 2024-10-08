@@ -22,7 +22,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Type in:
 > wsl --install
 - Reboot
-## STEP 3: Look up WSL and Windows IP Addresses
+## STEP 3: Look up IP Addresses for WSL (Ubuntu) and Windows
 - In the task bar, search for and launch "Ubuntu"
 - Enter a username and password when prompted (may be different than your Windows username and password)
 - Wait for the command prompt to finish loading
