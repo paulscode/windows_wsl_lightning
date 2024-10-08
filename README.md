@@ -57,7 +57,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Click "Apply" then "OK", and close Windows Defender Firewall
 ## STEP 5: Configure Bitcoin node to accept RPC
 - Launch Bitcoin Knots (or Bitcoin Core)
-- Click on "Settings", select "Options", and enable "RPC Server" checkbox
+- Click on "Settings", select "Options", and enable the "RPC Server" checkbox
 - Click "Open Configuration File", and click "Continue"
 - Enter the following (change "someusername" and "psw0rd!", and remember for STEP 6 what you chose):
   ```ini
