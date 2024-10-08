@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Check if the script is run as root and exit if true
+if [ "$EUID" -eq 0 ]; then
+    echo "This script should not be run with 'sudo'. Please run it as a regular user."
+    exit 1
+fi
+
+# Check if $HOME/.lightning/config exists, exit if true
+if [ -f "$HOME/.lightning/config" ]; then
+    echo "This script can only be run once."
+    exit 1
+fi
+
 # Get WSL IP Address
 WSL_IP_ADDRESS=$(hostname -I | awk '{print $1}')
 
