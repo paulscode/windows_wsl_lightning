@@ -37,7 +37,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
   grep nameserver /etc/resolv.conf | awk '{print $2}'
   ```
 ## STEP 4: Configure firewall rule for WSL to communicate with Windows
-- In the task bar, search for and lauch "Windows Defender Firewall"
+- In the task bar, search for and launch "Windows Defender Firewall"
 - Click on "Advanced Settings"
 - Click on "Inbound Rules"
 - Click on "New Rule"
