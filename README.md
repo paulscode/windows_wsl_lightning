@@ -130,6 +130,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Open a browser in Windows, and enter the URL
 
 # Shutting Down
+- Close the Browser
 - Return to the WSL command prompt, and press Ctrl+c to stop the CLN Application
 - Enter the following command:
   ```bash
