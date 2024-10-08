@@ -45,7 +45,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Select "TCP"
 - Select Specific Local Port, enter "8332", and click "Next"
 - Select "Allow the Connection", and click "Next"
-- Check "Domain", "Private", and "Public", and click "Next"
+- Leave the "Domain", "Private", and "Public" checkboxes checked, and click "Next"
 - For Name, enter "Bitcoin RPC"
 - For Description, enter "Allow WSL to communicate with you Bitcoin node", and click "Finish"
 - Right-click the new "Bitcoin RPC", and select "Properties"
