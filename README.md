@@ -46,7 +46,8 @@ These scripts assume the default installation folder was used (C:\Program Files\
 - Click "Scope"
 - For Local IP Addresses, select "These IP Addresses" and click "Add"
 - Enter "172.16.0.0/12" and click "OK"
-- For Remote IP Addresses, select "These IP Addresses", but leave the list blank
+- For Remote IP Addresses, select "These IP Addresses" and click "Add"
+- Enter "172.16.0.0/12" and click "OK"
 - Click "Apply" then "OK", and close Windows Defender Firewall
 ## STEP 4: Configure Bitcoin node RPC settings
 - Launch Bitcoin Knots (or Bitcoin Core)
