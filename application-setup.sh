@@ -80,4 +80,5 @@ npm audit fix
 # Return to the home directory
 cd "$HOME"
 
-echo "CLN Application setup complete. Please reboot and ensure Bitcoin Core is running before proceeding."
+echo ""
+echo "CLN Application setup complete! Please reboot and ensure Bitcoin Core is running before proceeding."
