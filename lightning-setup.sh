@@ -67,7 +67,7 @@ sudo systemctl restart tor
 
 # Wait for the Tor hidden service to be created
 echo "Waiting for Tor hidden service to create the hostname file..."
-while [ ! -f /var/lib/tor/lightning/hostname ]; do
+while ! sudo test -f /var/lib/tor/lightning/hostname; do
     sleep 2
 done
 
