@@ -21,11 +21,14 @@ WINDOWS_IP_ADDRESS=$(grep nameserver /etc/resolv.conf | awk '{print $2}')
 # Get Ubuntu Version (e.g., "22.04")
 UBUNTU_VERSION=$(lsb_release -rs | cut -d'.' -f1,2)
 
+echo ""
+echo "Let's collect some parameters to set up your lightning node!"
+echo ""
 # Prompt user for node name
-read -p "Enter a name for your node: " NODE_NAME
+read -p "First, enter a name for your node: " NODE_NAME
 
 # Prompt user for color hex code with default value
-read -p "Enter a color hex code for your node (default: FFA500): " COLOR_HEX
+read -p "Next, enter a color hex code for your node (default: FFA500): " COLOR_HEX
 COLOR_HEX=${COLOR_HEX:-FFA500}
 
 # Prompt user for Bitcoin RPC credentials
@@ -34,6 +37,10 @@ read -s -p "Enter your Bitcoin node's RPC password: " BITCOIN_RPC_PASSWORD
 echo ""
 read -p "Enter your Bitcoin node's RPC port (default: 8332): " BITCOIN_RPC_PORT
 BITCOIN_RPC_PORT=${BITCOIN_RPC_PORT:-8332}
+
+echo ""
+echo "Ok, ready to set things up!  This will take a few minutes."
+sleep 2
 
 cd $HOME
 
@@ -146,4 +153,5 @@ sudo apt-get install -y nodejs
 # Remove any unused packages:
 sudo apt autoremove -y
 
-echo "Setup complete. Please reboot and ensure Bitcoin Core is running before proceeding to the next step."
+echo ""
+echo "Setup complete! Please reboot and ensure Bitcoin Core is running before proceeding to the next step."
