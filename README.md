@@ -61,6 +61,7 @@ These scripts assume the default installation folder was used (C:\Program Files\
   rpcbind=0.0.0.0
   rpcallowip=172.16.0.0/12
   rpcport=8332
+  
   ```
 - Select "File", then "Save", and close the editor
 - Click "OK"
@@ -73,12 +74,14 @@ These scripts assume the default installation folder was used (C:\Program Files\
   wget https://raw.githubusercontent.com/paulscode/windows_wsl_lightning/refs/heads/main/lightning-setup.sh
   chmod 700 lightning-setup.sh
   ./lightning-setup.sh
+  
   ```
 - You will be propted to enter a few values to configure your lightning node (the "RPC username" and "RPC password" are from STEP 4)
 - Wait for script to finish executing, then enter:
   ```bash
   rm -f lightning-setup.sh
   sudo reboot
+  
   ```
 - Close Bitcoin Knots (or Bitcoin Core) and wait for it to completely shut down
 - Reboot the computer
@@ -101,11 +104,13 @@ These scripts assume the default installation folder was used (C:\Program Files\
   wget https://raw.githubusercontent.com/paulscode/windows_wsl_lightning/refs/heads/main/application-setup.sh
   chmod 700 application-setup.sh
   ./application-setup.sh
+  
   ```
 - Wait for script to finish executing, then enter:
   ```bash
   rm -f application-setup.sh
   sudo reboot
+  
   ```
 - Close Bitcoin Knots (or Bitcoin Core) and wait for it to completely shut down
 - Reboot the computer
