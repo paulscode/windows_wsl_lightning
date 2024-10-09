@@ -65,6 +65,9 @@ cat <<EOF2 > "$HOME/.lightning/config.json"
 }
 EOF2
 
+# Make sure Nodejs is installed
+sudo apt-get install -y nodejs
+
 # Download and install cln-application
 wget https://github.com/ElementsProject/cln-application/archive/refs/tags/v0.0.6.tar.gz -O cln-application-v0.0.6.tar.gz
 tar -xzf cln-application-v0.0.6.tar.gz
