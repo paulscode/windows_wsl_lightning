@@ -40,19 +40,12 @@ cd $HOME
 # Create a folder for the lightning configs and logs:
 mkdir -p .lightning
 
-# Add nodesource distro for Node 20:
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-
 # Make sure all packages are updated:
 sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install some additional required packages:
-sudo apt-get install -y libpq-dev net-tools nodejs npm python3-full tor
-
-# Remove any unused packages:
-sudo apt autoremove -y
+sudo apt-get install -y libpq-dev net-tools npm python3-full tor
 
 # Add the user to the Tor group:
 sudo usermod -aG debian-tor $USER
@@ -143,5 +136,14 @@ export COMMANDO_CONFIG="$HOME/.lightning/commando.config"
 cd "$HOME/cln-application"
 npm run start
 EOF3
+
+# Install Node 20:
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+sudo apt-get update
+sudo apt-get install -y nodejs
+
+# Remove any unused packages:
+sudo apt autoremove -y
 
 echo "Setup complete. Please reboot and ensure Bitcoin Core is running before proceeding to the next step."
