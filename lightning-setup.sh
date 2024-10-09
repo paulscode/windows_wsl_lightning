@@ -52,7 +52,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install some additional required packages:
-sudo apt-get install -y libpq-dev net-tools npm python3-full tor
+sudo apt-get install -y libpq-dev net-tools npm python3-full tor jq
 
 # Add the user to the Tor group:
 sudo usermod -aG debian-tor $USER
