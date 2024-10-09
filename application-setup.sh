@@ -27,15 +27,15 @@ fi
 # Navigate to the home directory
 cd "$HOME"
 
-# Extract LIGHTNING_PUBKEY using lightning-cli
+# Extract LIGHTNING_PUBKEY from lightning-cli getinfo output using grep
 LIGHTNING_PUBKEY=$(lightning-cli getinfo | grep -oP '(?<="id": ")[^"]+')
 if [ -z "$LIGHTNING_PUBKEY" ]; then
     echo "Failed to retrieve the lightning public key. Make sure lightningd is running correctly."
     exit 1
 fi
 
-# Extract LIGHTNING_RUNE using lightning-cli
-LIGHTNING_RUNE=$(lightning-cli commando-rune)
+# Extract LIGHTNING_RUNE from lightning-cli commando-rune output using jq
+LIGHTNING_RUNE=$(lightning-cli commando-rune | jq -r '.rune')
 if [ -z "$LIGHTNING_RUNE" ]; then
     echo "Failed to retrieve the lightning rune. Make sure lightningd is running correctly."
     exit 1
